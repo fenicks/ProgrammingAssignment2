@@ -1,7 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The both functions create a matrix with cacheable capability only for 
+## the inverse of the matrix.
+## The 'makeCacheMatrix' create the special matrix.
+## The 'cacheSolve' retrieve the inverted matrix but the computation 
+## is made only once.
 
-## Write a short comment describing this function
+## This function create a cacheable matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
@@ -19,7 +22,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function retrieve a cached inverted matrix if exist.
+## If it doesn't then calculates the inverse.
 library('MASS')
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
